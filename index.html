@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AI Image Generator</h1>
+            <p class="subtitle">Create images with Stability AI</p>
+        </header>
+        
+        <div class="input-group">
+            <label for="prompt">Describe your image</label>
+            <textarea id="prompt" placeholder="Enter a prompt..."></textarea>
+        </div>
+        
+        <div class="input-group">
+            <label for="api-key">Stability AI API Key</label>
+            <input type="password" id="api-key" placeholder="Enter your API key">
+        </div>
+        
+        <button id="generate-btn">Generate Image</button>
+        
+        <div class="loading" id="loading">
+            <div class="loading-spinner"></div>
+            <p>Generating your image...</p>
+        </div>
+        
+        <div class="error" id="error-message"></div>
+        <div class="success" id="success-message"></div>
+        
+        <div class="image-container">
+            <div class="placeholder-text" id="placeholder">
+                Your image will appear here
+            </div>
+            <img id="output-image">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
